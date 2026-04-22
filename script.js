@@ -220,14 +220,14 @@ document.addEventListener('DOMContentLoaded', () => {
         async task(arm, el) {
             const r = el.getBoundingClientRect();
             const tx = r.left + r.width/2, ty = r.top + r.height/2;
-            arm.clawOpenness = 1.3; await arm.moveTo(arm.storagePos.x, arm.storagePos.y, 0.45);
+            arm.clawOpenness = 1.3; await arm.moveTo(arm.storagePos.x, arm.storagePos.y, 0.35); // Fast but visible
             arm.cargo = { w: r.width, h: r.height }; arm.clawOpenness = 0.5;
-            await new Promise(r => setTimeout(r, 40)); 
-            await arm.moveTo(tx, ty - 150, 0.35); await arm.moveTo(tx, ty, 0.45); 
+            await new Promise(r => setTimeout(r, 80)); // Snappy dwell
+            await arm.moveTo(tx, ty - 200, 0.28); await arm.moveTo(tx, ty, 0.35); 
             el.classList.add('assembled', 'active');
             arm.clawOpenness = 1.8; arm.cargo = null;
-            await new Promise(r => setTimeout(r, 40)); 
-            await arm.moveTo(arm.storagePos.x, arm.storagePos.y, 0.35);
+            await new Promise(r => setTimeout(r, 80)); 
+            await arm.moveTo(arm.storagePos.x, arm.storagePos.y, 0.28);
         }
 
         render() {
