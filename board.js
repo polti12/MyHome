@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const postList = document.getElementById('post-list');
     const toggleWriteBtn = document.getElementById('toggle-write-btn');
     const boardFormContainer = document.getElementById('board-form-container');
-    let currentEditIndex = -1;
+    // Using window scope for state to ensure global edit/delete functions can access it
+    window.currentEditIndex = -1;
 
     if (toggleWriteBtn && boardFormContainer) {
         toggleWriteBtn.addEventListener('click', () => {
-            if (currentEditIndex > -1) {
+            if (window.currentEditIndex > -1) {
                 alert("현재 다른 항목을 수정 중입니다. 수정 취소를 먼저 진행해주세요.");
                 return;
             }
@@ -105,15 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const posts = JSON.parse(localStorage.getItem('free_board_posts')) || [];
 
-            if (currentEditIndex > -1) {
-                posts[currentEditIndex].name = name;
-                posts[currentEditIndex].email = email;
-                posts[currentEditIndex].password = password;
-                posts[currentEditIndex].title = title;
-                posts[currentEditIndex].content = content;
+            if (window.currentEditIndex > -1) {
+                posts[window.currentEditIndex].name = name;
+                posts[window.currentEditIndex].email = email;
+                posts[window.currentEditIndex].password = password;
+                posts[window.currentEditIndex].title = title;
+                posts[window.currentEditIndex].content = content;
                 alert('게시글이 깔끔하게 수정되었습니다!');
                 
-                currentEditIndex = -1;
+                window.currentEditIndex = -1;
                 const submitBtn = document.querySelector('#post-form button[type="submit"]');
                 submitBtn.textContent = '게시글 등록';
                 submitBtn.style.backgroundColor = '';
@@ -148,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cancelBtn.style.marginTop = '10px'; 
         
         cancelBtn.onclick = () => {
-            currentEditIndex = -1;
+            window.currentEditIndex = -1;
             postForm.reset();
             submitBtn.textContent = '게시글 등록';
             submitBtn.style.backgroundColor = '';
@@ -183,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('title').value = post.title;
         document.getElementById('content').value = post.content;
         
-        currentEditIndex = index;
+        window.currentEditIndex = index;
         const submitBtn = document.querySelector('#post-form button[type="submit"]');
         submitBtn.textContent = '게시글 수정 완료';
         submitBtn.style.backgroundColor = '#10B981';
