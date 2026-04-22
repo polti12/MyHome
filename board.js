@@ -51,13 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const postEl = document.createElement('div');
             postEl.className = 'board-post-item reveal active';
             
+            const likedPosts = JSON.parse(localStorage.getItem('liked_posts') || '{}');
+            const postId = post.date + post.title;
+            const isLiked = likedPosts[postId];
+            
             const htmlContent = `
                 <div class="b-post-header" style="display:flex; justify-content:space-between; align-items:flex-start;">
                     <div>
                         <h4 style="display:inline-block; margin-right: 10px;">${escapeHTML(post.title)}</h4>
                     </div>
                     <div class="b-post-actions" style="min-width: 170px; text-align: right;">
-                        <button onclick="likePost(${originalIndex})" class="btn btn-primary" style="padding: 4px 10px; font-size: 0.75rem; margin-right: 5px;">👍 추천 ${post.likes || 0}</button>
+                        <button onclick="likePost(${originalIndex})" class="btn ${isLiked ? 'btn-secondary' : 'btn-primary'}" 
+                                style="padding: 4px 10px; font-size: 0.75rem; margin-right: 5px; ${isLiked ? 'opacity: 0.6; pointer-events: none;' : ''}">
+                            ${isLiked ? '✅ 추천완료' : '👍 추천'} ${post.likes || 0}
+                        </button>
                         <button onclick="editPost(${originalIndex})" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">수정</button>
                         <button onclick="deletePost(${originalIndex})" class="btn" style="padding: 4px 10px; font-size: 0.75rem; background-color: rgba(239,68,68,0.2); border: 1px solid #ef4444; color: #ef4444; margin-left:5px;">삭제</button>
                     </div>
@@ -212,11 +219,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.likePost = function(index) {
         const posts = JSON.parse(localStorage.getItem('free_board_posts')) || [];
-        if (posts[index]) {
-            posts[index].likes = (posts[index].likes || 0) + 1;
-            localStorage.setItem('free_board_posts', JSON.stringify(posts));
-            loadPosts();
+        const post = posts[index];
+        if (!post) return;
+
+        const likedPosts = JSON.parse(localStorage.getItem('liked_posts') || '{}');
+        const postId = post.date + post.title;
+
+        if (likedPosts[postId]) {
+            alert('이미 이 게시글을 추천하셨습니다!');
+            return;
         }
+
+        post.likes = (post.likes || 0) + 1;
+        likedPosts[postId] = true;
+
+        localStorage.setItem('free_board_posts', JSON.stringify(posts));
+        localStorage.setItem('liked_posts', JSON.stringify(likedPosts));
+        loadPosts();
     };
 
     window.addReply = function(e, postIndex) {
