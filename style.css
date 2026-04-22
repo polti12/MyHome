@@ -2779,9 +2779,15 @@ body {
     width: 100%;
     position: relative;
     display: flex;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: saturate(0.8);
+}
+
+.trajectory-node:hover {
+    filter: saturate(1.2);
+    transform: scale(1.02);
 }
 
 .trajectory-node:hover {
@@ -2818,19 +2824,43 @@ body {
 }
 
 .node-content {
-    background: rgba(20, 25, 35, 0.84);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 40px;
+    background: rgba(10, 15, 25, 0.9);
+    border: 1px solid rgba(255, 176, 0, 0.2);
+    padding: 50px;
     border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
-    width: 600px; /* Strong fixed width */
-    aspect-ratio: 1 / 1; /* Force Square */
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    width: 600px;
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    word-break: keep-all; /* Prevent awkward Korean line breaks */
-    transition: all 0.4s ease;
+    word-break: keep-all;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.node-content::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: repeating-linear-gradient(0deg, rgba(255, 176, 0, 0.03) 0px, rgba(255, 176, 0, 0.03) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+}
+
+/* Holographic numbering behind content */
+.node-content::after {
+    content: 'TECH_PATH';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255, 176, 0, 0.03);
+    font-family: 'Rajdhani', sans-serif;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .trajectory-label {
@@ -3012,13 +3042,26 @@ body {
    PROJECT SPECIFIC: MECHANICAL GEARS
    ============================================================ */
 .gears-container {
-    left: -150px;
-    width: 200px;
-    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.gears-container.left {
+    left: -250px;
+}
+
+.gears-container.right {
+    right: -250px;
 }
 
 .gears-container::before, .gears-container::after {
@@ -3039,10 +3082,24 @@ body {
     to { transform: rotate(360deg); }
 }
 
-.section-active .gears-container {
+.section-active .gears-container.left {
     left: 40px;
-    opacity: 0.3 !important;
+    opacity: 0.2;
 }
+
+.section-active .gears-container.right {
+    right: 40px;
+    opacity: 0.2;
+}
+
+.gear {
+    color: rgba(255, 176, 0, 0.15);
+    filter: drop-shadow(0 0 10px rgba(255, 176, 0, 0.2));
+    animation: gear-rotate 15s linear infinite;
+}
+
+.gear.g2, .gear.g5 { animation-direction: reverse; animation-duration: 20s; }
+.gear.g3, .gear.g6 { font-size: 1.5em; }
 
 /* ============================================================
    NAVIGATION: TECH SCAN EFFECT
