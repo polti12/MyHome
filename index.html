@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한지훈 | AMK Equipment Excellence Portfolio</title>
+    <meta name="description" content="AMK(어플라이드 머티어리얼즈 코리아) 장비 엔지니어 지원자 한지훈의 기술적 완결성과 실무 역량을 담은 포트폴리오입니다.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@800&family=Space+Mono&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body id="top">
+    <!-- Biometric Door Preloader -->
+    <div id="preloader" class="biometric-preloader">
+        <div class="door door-left">
+            <div class="door-lock"></div>
+        </div>
+        <div class="door door-right">
+            <div class="door-lock"></div>
+        </div>
+
+        <div class="biometric-center">
+            <div class="retina-scanner">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+                <div class="scan-laser"></div>
+            </div>
+            <div class="loader-text" id="loaderText">BIOMETRIC SCAN...</div>
+        </div>
+    </div>
+    <!-- Background & Assembly Layers -->
+    <canvas id="dynamic-canvas"></canvas>
+    <canvas id="assembly-canvas"></canvas>
+
+    <!-- Precision Interface Elements -->
+    <div class="precision-tracker" id="tracker">
+        <div class="tracker-pos" id="tracker-coords">SCANNING...</div>
+    </div>
+    <div class="floating-bits" id="floating-bits"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">HAN JI-HOON</div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#mastery">TECHNICAL MASTERY</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#history">HISTORY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="board.html" class="btn-nav-premium">COMMUNITY</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 1 & 2단계: HOME - 브랜딩 및 정체성 -->
+    <header id="home" class="hero section">
+        <div class="hero-video-bg">
+            <!-- Hero Video Removed as requested -->
+        </div>
+        <div class="industrial-overlay"></div>
+
+        <!-- Live Status Monitor (Industrial Aesthetic) -->
+        <div class="hero-status-panel" data-assemble="true">
+            <div class="status-header">SYSTEM_OPERATIONAL</div>
+            <div class="status-body">
+                <div class="status-row"><span>UNIT_ID:</span> <span>HJH-ENGR-79</span></div>
+                <div class="status-row"><span>UPTIME:</span> <span id="hero-uptime">99.98%</span></div>
+                <div class="status-row"><span>STATUS:</span> <span class="status-active">READY</span></div>
+            </div>
+            <div class="status-footer">PRECISION_LAB_V4.0</div>
+        </div>
+
+        <div class="container hero-content">
+            <h2 class="reveal-text" data-assemble="true">Beyond Limits, Making Possible</h2>
+            <h1 class="reveal-title" data-assemble="true">원자 단위의 정밀함으로<br><span class="highlight">장비 가동률(Uptime)을
+                    완성하는</span><br>엔지니어 한지훈</h1>
+            <p class="hero-desc" data-assemble="true">사소한 움직임도 놓치지 않는 관찰력과 사용자 중심의 탐구 태도로 AMK의 재료 혁신을 뒷받침합니다.</p>
+            <div class="cta-buttons" data-assemble="true">
+                <a href="#mastery" class="btn btn-primary">Core Skills</a>
+                <a href="#projects" class="btn btn-secondary">Projects</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 01: TECHNICAL MASTERY -->
+    <section id="mastery" class="section">
+        <div class="side-deco circuit-left"></div>
+        <div class="side-deco circuit-right"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-subtitle">TRACE 01. TECHNICAL ARSENAL</h2>
+                <h3 class="section-title">Technical Mastery: 핵심 엔지니어링 역량</h3>
+            </div>
+
+            <div class="mastery-grid-v2">
+                <!-- Skill 1 -->
+                <div class="mastery-card-v2 reveal">
+                    <div class="card-visual-placeholder">
+                        <img src="images/1.png" alt="PLC 제어 회로" class="real-image" onerror="this.src=''; this.alt='[ 1.png ]'" style="width:100%; height:100%; object-fit:contain; z-index:2; position:relative; background:#000;">
+                        <div class="scanlines-card"></div>
+                    </div>
+                    <div class="card-content">
+                        <h4>01. PLC 정밀 제어 및 완결성 있는 디버깅</h4>
+                        <ul class="skill-list">
+                            <li><strong>시퀀스 제어 프로그래밍:</strong> GX-Works2 활용, 타이머/카운터/산술 연산 기반 장치 제어</li>
+                            <li><strong>체계적 디버깅 및 시뮬레이션:</strong> <span class="highlight-text">I/O 할당표</span> 기반 H/W-S/W 정밀 대조 및 사전 에러 필터링</li>
+                            <li><strong>유지보수 이력 관리:</strong> <span class="highlight-text">PLC 프로그램 이력표</span> 작성을 통한 시스템 신뢰성 지속 확보</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="mastery-card-v2 reveal" style="transition-delay: 0.1s;">
+                    <div class="card-visual-placeholder">
+                        <img src="images/7.png" alt="C# 대시보드" class="real-image" onerror="this.src=''; this.alt='[ 7.png ]'" style="width:100%; height:100%; object-fit:contain; z-index:2; position:relative; background:#000;">
+                        <div class="scanlines-card"></div>
+                    </div>
+                    <div class="card-content">
+                        <h4>02. C# 기반 지능형 모니터링 및 시스템 통합</h4>
+                        <ul class="skill-list">
+                            <li><strong>응용 프로그램 구축:</strong> .NET 기반 로봇 상태 실시간 진단 모니터링 툴 설계 설계 및 배포</li>
+                            <li><strong>가동률(Uptime) 극대화:</strong> <span class="highlight-text">델리게이트(Delegate)</span> & 이벤트 처리로 이상 상태 즉각 대응 시스템 구현</li>
+                            <li><strong>객체 지향 설계(OOP):</strong> 클래스/인터페이스 설계 원칙 준수로 S/W 확장성 극대화</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="mastery-card-v2 reveal" style="transition-delay: 0.2s;">
+                    <div class="card-visual-placeholder">
+                        <img src="images/2.png" alt="전기회로 설계" class="real-image" onerror="this.src=''; this.alt='[ 2.png ]'" style="width:100%; height:100%; object-fit:contain; z-index:2; position:relative; background:#000;">
+                        <div class="scanlines-card"></div>
+                    </div>
+                    <div class="card-content">
+                        <h4>03. 반도체 전자회로 분석 및 정밀 계측</h4>
+                        <ul class="skill-list">
+                            <li><strong>핵심 소자 분석:</strong> BJT, FET, OP AMP 응용 신호 증폭 및 고속 스위칭 회로 해석</li>
+                            <li><strong>모의 실험 & H/W 검증:</strong> TinkerCAD 시뮬레이션 활용 교차 검증 및 KiCAD 기반 PCB 설계 프로세스 적용</li>
+                            <li><strong>통합 인터페이스 대처:</strong> 아두이노-로직 연동 구성능력을 바탕으로 정밀한 H/W 트러블슈팅 능력 구비</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="mastery-card-v2 reveal" style="transition-delay: 0.3s;">
+                    <div class="card-visual-placeholder" style="background: #000;">
+                        <img src="images/10.png" alt="AI 데이터 설계" class="real-image" onerror="this.src=''; this.alt='< 10.png >'" style="width:100%; height:100%; object-fit:contain; z-index:2; position:relative;">
+                        <div class="scanlines-card"></div>
+                    </div>
+                    <div class="card-content">
+                        <h4>04. AI 기반 데이터 설계 및 장비 최적화</h4>
+                        <ul class="skill-list">
+                            <li><strong>머신러닝 알고리즘:</strong> Python 기반 scikit-learn, TensorFlow 응용 및 심층 신경망(DNN) 아키텍처 구현</li>
+                            <li><strong>데이터 분석론 적용:</strong> 스케일링/편향 제거 전처리를 통한 AI 모델 예측 신뢰도 최적화</li>
+                            <li><strong>산업 안전 및 윤리 태도:</strong> 사소한 지점도 검증하는 안전 우선 의지 및 장비 이상 징후 조기 탐지 기조 확립</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: HIGH-SPEED ROBOT PROJECT -->
+    <section id="projects" class="section">
+        <!-- Mechanical Gears Decoration -->
+        <div class="gears-container left">
+            <div class="gear g1"><i class="fas fa-cog"></i></div>
+            <div class="gear g2"><i class="fas fa-cog"></i></div>
+            <div class="gear g3"><i class="fas fa-cog"></i></div>
+        </div>
+        <div class="gears-container right">
+            <div class="gear g4"><i class="fas fa-cog"></i></div>
+            <div class="gear g5"><i class="fas fa-cog"></i></div>
+            <div class="gear g6"><i class="fas fa-cog"></i></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-subtitle">TRACE 02. CAPSTONE DESIGN PROJECT</h2>
+                <h3 class="section-title">기구학적 최적화를 통한 고속 보행 로봇 개발</h3>
+            </div>
+
+            <!-- 1. Main Project Hero: Media + Detailed Technical Log -->
+            <div class="project-hero-v2">
+                <div class="hero-main-media reveal">
+                    <div class="final-video-placeholder" id="projectVideoContainer" style="padding: 0; background: #000; overflow: hidden; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <video id="mainProjectVideo" autoplay loop muted playsinline controls style="width:100%; height:100%; object-fit:contain; display:block; pointer-events: auto;">
+                            <source src="images/6.MOV" type="video/mp4">
+                            <source src="images/6.MOV" type="video/quicktime">
+                        </video>
+                        <div class="scanlines-card"></div>
+                    </div>
+                </div>
+
+                <div class="hero-tech-log reveal">
+                    <div class="award-badge-mini"><i class="fas fa-trophy"></i> 우수상 수상작</div>
+                    <h4>TECHNICAL_LOG</h4>
+                    
+                    <div class="log-steps">
+                        <div class="log-step">
+                            <div class="step-icon"><i class="fas fa-search"></i></div>
+                            <div class="step-body">
+                                <span class="step-label">PHASE 01: PROBLEM ANALYSIS</span>
+                                <h5>기존 테오 얀센 구조의 한계 분석</h5>
+                                <p>다리 끝점 하중 집중으로 인한 링크 부하 및 에너지 손실 문제 진계</p>
+                            </div>
+                        </div>
+
+                        <div class="log-step">
+                            <div class="step-icon"><i class="fas fa-drafting-polyhedron"></i></div>
+                            <div class="step-body">
+                                <span class="step-label">PHASE 02: KINEMATIC SOLUTION</span>
+                                <h5>메커니즘 최적화 설계</h5>
+                                <p>삼각형 발 제거 및 직선형 링크 변형을 통한 기구학적 응력 분산 실현</p>
+                            </div>
+                        </div>
+
+                        <div class="log-step border-highlight">
+                            <div class="step-icon accent"><i class="fas fa-microchip"></i></div>
+                            <div class="step-body">
+                                <span class="step-label">PHASE 03: IMPLEMENTATION</span>
+                                <h5>3단계 순차 접지 방식 도입</h5>
+                                <p>점1 → 면 → 점2 순차 접지 시스템으로 타미야 기어박스 구동 효율 극대화</p>
+                            </div>
+                        </div>
+
+                        <div class="log-step result-step">
+                            <div class="step-icon gold"><i class="fas fa-check-circle"></i></div>
+                            <div class="step-body">
+                                <span class="step-label">FINAL RESULT</span>
+                                <h5>고속 보행 실증 및 기술력 입증</h5>
+                                <p>경진대회 우수상 수상 및 설계 데이터 대비 오차 0.1mm 미만 완결성 확보</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Engineering Process Grid (3-Column Layout) -->
+            <div class="process-grid-v2">
+                <!-- Card 1: AutoCAD -->
+                <div class="process-card reveal">
+                    <div class="card-visual-box" style="padding: 0; background: #000;">
+                        <img src="images/8.png" alt="AutoCAD 도면" class="real-image" onerror="this.src=''; this.alt='[ 8.png ]'" style="width:100%; height:100%; object-fit:contain;">
+                    </div>
+                    <div class="card-hover-info">
+                        <h5>01. 정밀 설계 (AutoCAD)</h5>
+                        <p>부품 배치 최적화 및 0.1mm 단위의 정밀 가공 설계 수행</p>
+                    </div>
+                </div>
+                <!-- Card 2: SolidWorks -->
+                <div class="process-card reveal" style="transition-delay: 0.1s;">
+                    <div class="card-visual-box" style="padding: 0; background: #000;">
+                        <img src="images/9.png" alt="Solidworks 3D" class="real-image" onerror="this.src=''; this.alt='[ 9.png ]'" style="width:100%; height:100%; object-fit:contain;">
+                    </div>
+                    <div class="kinematic-overlay">기구학적 해석 완료</div>
+                    <div class="card-hover-info">
+                        <h5>02. 3D 메커니즘 해석</h5>
+                        <p>SolidWorks를 활용한 기구학적 시뮬레이션 및 하중 분산 설계</p>
+                    </div>
+                </div>
+                <!-- Card 3: Final Product Photo -->
+                <div class="process-card reveal" style="transition-delay: 0.2s;">
+                    <div class="card-visual-box" style="padding: 0; background: #000;">
+                        <img src="images/4.jpg" alt="테오얀센 실물" class="real-image" onerror="this.src=''; this.alt='[ 4.jpg ]'" style="width:100%; height:100%; object-fit:contain;">
+                    </div>
+                    <div class="card-hover-info">
+                        <h5>03. 실물 구현 (Reality)</h5>
+                        <p>설계 데이터와 100% 일치하는 정밀 조립 및 최종 검수 완료</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. PSR Summary Bar -->
+            <div class="psr-summary-bar reveal">
+                <div class="psr-item">
+                    <span class="psr-label">PROBLEM</span>
+                    <p>다리 끝점 하중 집중 및 링크 부하 문제 분석</p>
+                </div>
+                <div class="psr-arrow"><i class="fas fa-angle-right"></i></div>
+                <div class="psr-item">
+                    <span class="psr-label">SOLUTION</span>
+                    <p>선형 링크 변형 및 3단계 순차 접지 기술 도입</p>
+                </div>
+                <div class="psr-arrow"><i class="fas fa-angle-right"></i></div>
+                <div class="psr-item">
+                    <span class="psr-label">RESULT</span>
+                    <p>타미야 기어박스 최적 구동 & 경진대회 우수상 수상</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: THE SEAMLESS PATH (HISTORY) -->
+    <section id="history" class="section">
+        <div class="side-deco beam-left"></div>
+        <div class="side-deco beam-right"></div>
+        <!-- SVG Circuit Lines Layer -->
+        <div class="circuit-container">
+            <svg class="circuit-svg" width="100%" height="100%" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                <path id="path-1" d="M 100,50 L 100,200 L 900,200 L 900,450 L 100,450 L 100,700 L 900,700 L 900,950" 
+                      fill="none" stroke="rgba(255, 176, 0, 0.2)" stroke-width="2" />
+                <path class="path-animate" d="M 100,50 L 100,200 L 900,200 L 900,450 L 100,450 L 100,700 L 900,700 L 900,950" 
+                      fill="none" stroke="url(#line-gradient)" stroke-width="3" stroke-dasharray="2000" stroke-dashoffset="2000" />
+                <defs>
+                    <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#FFB000" />
+                        <stop offset="100%" stop-color="#FFB000" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="container relative-z">
+            <!-- Content nodes stay here -->
+            <div class="section-header">
+                <h2 class="section-subtitle">TRACE 03. PROFESSIONAL EVOLUTION</h2>
+                <h3 class="section-title">The Seamless Path: 엔지니어링 성장 궤적</h3>
+            </div>
+
+            <div class="trajectory-roadmap">
+                <!-- Trajectory 1 -->
+                <div class="trajectory-node reveal" style="align-self: flex-start;">
+                    <div class="node-marker">01</div>
+                    <div class="node-content">
+                        <span class="trajectory-label">Trajectory 1: 기초 소양에서 논리적 제어로의 전이</span>
+                        <h5>Curiosity to Logic Control</h5>
+                        <p>평촌고등학교에서의 공학적 호기심이 동양미래대학교 로봇소프트웨어과에서의 <span class="highlight-text">PLC & C# 제어 논리</span>로 구체화되는 흐름입니다.</p>
+                        <div class="node-value">Value: I/O 할당표 분석 & 이벤트 기반 정밀 제어</div>
+                    </div>
+                </div>
+
+                <!-- Trajectory 2 -->
+                <div class="trajectory-node reveal" style="align-self: flex-end;">
+                    <div class="node-marker shadow-gold">02</div>
+                    <div class="node-content">
+                        <span class="trajectory-label">Trajectory 2: 기술적 숙련에서 창의적 혁신으로의 도약</span>
+                        <h5>Skill to Creative Innovation</h5>
+                        <p>습득한 제어 기술이 <span class="highlight-text">테오 얀센 링크 구조 개선</span>이라는 실질적인 성과로 폭발하는 궤적입니다.</p>
+                        <div class="node-value">Value: 3단계 순차 접지 솔루션 & 경진대회 우수상</div>
+                    </div>
+                </div>
+
+                <!-- Trajectory 3 -->
+                <div class="trajectory-node reveal" style="align-self: flex-start;">
+                    <div class="node-marker">03</div>
+                    <div class="node-content">
+                        <span class="trajectory-label">Trajectory 3: 설계의 완결성에서 실전 몰입으로의 확장</span>
+                        <h5>Design to Field-Ready</h5>
+                        <p>증명된 설계 역량이 반도체 부트캠프의 <span class="highlight-text">몰입형 교육</span>을 통해 산업 현장 맞춤형 전문성으로 고도화되는 과정입니다.</p>
+                        <div class="node-value">Value: 반도체 장비 S/W 실무 & PLC 실전 디버깅</div>
+                    </div>
+                </div>
+
+                <!-- Trajectory 4 -->
+                <div class="trajectory-node reveal" style="align-self: flex-end;">
+                    <div class="node-marker highlight-border">04</div>
+                    <div class="node-content">
+                        <span class="trajectory-label">Trajectory 4: 준비된 역량에서 글로벌 비전으로의 수렴</span>
+                        <h5>Competency to Global Vision</h5>
+                        <p>정제된 역량이 <span class="highlight-text">AMK·램리서치</span>의 핵심 가치(Uptime 극대화)와 맞닿는 최종 선입니다.</p>
+                        <div class="node-value">Value: 장비 가동률 극대화 & 글로벌 엔지니어링 마인드</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bridge Removed -->
+    </section>
+
+    <!-- SECTION 04: CONTACT (PROFESSIONAL HEADQUARTERS) -->
+    <section id="contact" class="section">
+        <div class="side-deco bracket-left"></div>
+        <div class="side-deco bracket-right"></div>
+        <div class="container contact-container-v3">
+            <div class="contact-main-flex">
+                <!-- Left: Identity Area -->
+                <div class="identity-area-clean reveal">
+                    <p class="id-pre">READY FOR NEXT STEP</p>
+                    <h1 class="contact-name-v3">한지훈</h1>
+                    <p class="id-motto" style="color: rgba(255, 255, 255, 0.7); margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6; border-left: 2px solid #FFB000; padding-left: 20px;">
+                        기술의 가치를 실현하고 함께 성장할 <br>파트너를 찾고 계신다면, 언제든 연락 주시기 바랍니다.
+                    </p>
+                    <div class="identity-links-v3">
+                        <div class="id-link-v3">
+                            <span class="id-label">EMAIL</span>
+                            <a href="mailto:polti0000@dongyang.ac.kr">polti0000@dongyang.ac.kr</a>
+                        </div>
+                        <div class="id-link-v3">
+                            <span class="id-label">PHONE</span>
+                            <a href="tel:010-1234-1234">010-1234-1234</a>
+                        </div>
+                        <div class="id-link-v3">
+                            <span class="id-label">GITHUB</span>
+                            <a href="https://github.com/polti12" target="_blank">github.com/polti12</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Communication Form -->
+                <div class="comm-form-area-clean reveal">
+                    <div class="comm-card-clean">
+                        <h4 class="form-title">1:1 INQUIRY</h4>
+                        <form class="comm-form-v3">
+                            <div class="input-v3">
+                                <input type="text" placeholder="성함 / 회사명" required>
+                            </div>
+                            <div class="input-v3">
+                                <input type="email" placeholder="회신받으실 이메일" required>
+                            </div>
+                            <div class="input-v3">
+                                <textarea placeholder="문의하실 내용을 자유롭게 작성해주세요." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn-v3">
+                                SEND MESSAGE
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-clean">
+                <p>&copy; 2026 HAN JI-HOON | MECHANICAL S/W ENGINEER PORTFOLIO</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times; CLOSE_SESSION</button>
+            <div class="scanline-modal"></div>
+            <div id="modal-loader" class="loader">SYNCHRONIZING...</div>
+            <div id="modal-data-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
