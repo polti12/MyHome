@@ -449,51 +449,6 @@ nav.scrolled {
     z-index: 1;
 }
 
-.hero-status-panel {
-    position: absolute;
-    top: 20vh;
-    right: 8%;
-    width: 300px;
-    background: rgba(10, 10, 15, 0.85);
-    border: 1px solid rgba(255, 176, 0, 0.2);
-    border-left: 4px solid var(--primary-blue);
-    padding: 25px;
-    font-family: var(--font-mono);
-    z-index: 10;
-    backdrop-filter: blur(15px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-}
-
-.status-header {
-    font-size: 0.75rem;
-    color: var(--primary-blue);
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 176, 0, 0.1);
-    padding-bottom: 8px;
-}
-
-.status-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-    color: var(--text-silver);
-}
-
-.status-active {
-    color: var(--accent-mint);
-    text-shadow: 0 0 10px var(--accent-mint);
-    font-weight: bold;
-}
-
-.status-footer {
-    margin-top: 15px;
-    font-size: 0.65rem;
-    opacity: 0.5;
-    text-align: right;
-    letter-spacing: 1px;
-}
 
 /* Precision Tracker (Mouse Interface) */
 .precision-tracker {
@@ -3388,13 +3343,6 @@ nav {
     
     /* Hero */
     .reveal-title { font-size: 1.8rem; line-height: 1.3; } /* Reduced from 2.2 for safer fit */
-    .hero-status-panel { 
-        position: relative; 
-        top: 0; right: 0; 
-        width: 100%; 
-        margin-top: 30px; 
-        right: auto;
-    }
     .cta-buttons { flex-direction: column; width: 100%; gap: 10px; }
     .btn { text-align: center; padding: 12px 20px; }
 
