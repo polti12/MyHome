@@ -1690,6 +1690,7 @@ nav.scrolled {
     border-radius: 2px;
 }
 
+.data-graph {
 background: linear-gradient(transparent 95%, rgba(0, 163, 255, 0.2) 95%),
 linear-gradient(90deg, transparent 95%, rgba(0, 163, 255, 0.2) 95%);
 background-size: 40px 40px;
@@ -3364,4 +3365,91 @@ nav {
     height: 90px;
     min-width: 90px;
     font-size: 1.8rem;
+}
+
+/* ============================================================
+   MOBILE RESPONSIVITY (최종 보정)
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .container { max-width: 95%; }
+    .mastery-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .section-title { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    body { font-size: 1rem; }
+    .section { padding: 60px 0; }
+    
+    /* Navigation */
+    .nav-container { padding: 0 5%; }
+    .nav-links { gap: 15px; }
+    .nav-links a { font-size: 0.7rem; letter-spacing: 0.5px; }
+    
+    /* Hero */
+    .reveal-title { font-size: 1.8rem; line-height: 1.3; } /* Reduced from 2.2 for safer fit */
+    .hero-status-panel { 
+        position: relative; 
+        top: 0; right: 0; 
+        width: 100%; 
+        margin-top: 30px; 
+        right: auto;
+    }
+    .cta-buttons { flex-direction: column; width: 100%; gap: 10px; }
+    .btn { text-align: center; padding: 12px 20px; }
+
+    /* Grids */
+    .mastery-grid { grid-template-columns: 1fr; }
+    .mastery-card { min-height: auto !important; padding: 30px 20px !important; }
+    
+    .process-grid-v2 { grid-template-columns: 1fr !important; }
+    .project-hero-v2 { grid-template-columns: 1fr !important; }
+    
+    /* PSR Summary Bar */
+    .psr-summary-bar { flex-direction: column !important; padding: 20px !important; }
+    .psr-item p { font-size: 1.1rem !important; }
+    .psr-arrow { transform: rotate(90deg); justify-content: center; margin: 10px 0; }
+
+    /* Trajectory / History */
+    .trajectory-node { 
+        flex-direction: column !important;
+        align-self: center !important; 
+        width: 100% !important; 
+        margin-bottom: 60px !important; 
+        gap: 20px !important;
+    }
+    .node-content { 
+        padding: 20px !important;
+        margin-top: 10px !important; 
+        text-align: center !important; 
+        width: 100% !important;
+        background: rgba(10, 10, 10, 0.8) !important;
+        border: 1px solid rgba(255, 176, 0, 0.2) !important;
+    }
+    .node-marker { 
+        margin: 0 auto !important; 
+        width: 70px !important; 
+        height: 70px !important; 
+        min-width: 70px !important;
+    }
+    .trajectory-roadmap { gap: 40px !important; padding: 20px 0 !important; }
+    .circuit-container { display: none !important; }
+
+    /* Contact */
+    .contact-main-flex { flex-direction: column; gap: 40px; }
+    .contact-name-v3 { font-size: 3rem; text-align: center; }
+    .identity-area-clean { text-align: center; }
+    .id-motto { border-left: none; border-top: 2px solid #FFB000; padding-left: 0; padding-top: 20px; margin: 0 auto; }
+    .comm-form-area-clean { max-width: 100%; }
+    
+    /* Board specific */
+    .board-form-card { padding: 20px; }
+    .form-row { flex-direction: column !important; gap: 10px !important; }
+}
+
+@media (max-width: 480px) {
+    .reveal-title { font-size: 1.5rem; }
+    .section-title { font-size: 1.8rem; }
+    .contact-name-v3 { font-size: 2.2rem; }
+    .id-link-v3 a { font-size: 1rem; }
 }

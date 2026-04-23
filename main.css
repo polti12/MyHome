@@ -631,11 +631,20 @@ nav.scrolled {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .reveal-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .container {
+        padding: 0 20px;
     }
 
     .project-item {
         grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .project-visual {
+        height: 300px;
     }
 
     .timeline-item {
@@ -650,6 +659,10 @@ nav.scrolled {
 
     .timeline::before {
         left: 0;
+    }
+
+    .nav-links {
+        display: none; /* simple mobile fix: hide or convert to icon */
     }
 }
 

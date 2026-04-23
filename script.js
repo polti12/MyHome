@@ -256,9 +256,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelectorAll('.reveal, .mastery-card-v2').forEach(el => el.classList.add('active'));
                 
                 // Force play all videos after intro
-                document.querySelectorAll('video').forEach(v => {
-                    v.play().catch(err => console.log("Autoplay blocked/failed, trying again..."));
-                });
+                const playVideos = () => {
+                    document.querySelectorAll('video').forEach(v => {
+                        v.muted = true;
+                        v.play().catch(err => console.log("Autoplay blocked/failed"));
+                    });
+                };
+                playVideos();
+                // Fallback for mobile: play on first touch/click
+                document.addEventListener('touchstart', playVideos, { once: true });
+                document.addEventListener('click', playVideos, { once: true });
             });
         }, 2000); // Smoother intro start
     }
