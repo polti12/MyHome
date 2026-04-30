@@ -28,24 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.currentPosts = {}; // To keep track of posts locally
 
     if (toggleWriteBtn && boardFormContainer) {
-        toggleWriteBtn.addEventListener('click', () => {
-            if (window.currentEditDocId) {
-                alert("현재 다른 항목을 수정 중입니다. 수정 취소를 먼저 진행해주세요.");
-                return;
-            }
-
-            if (boardFormContainer.style.display === 'none' || boardFormContainer.style.display === '') {
-                boardFormContainer.style.display = 'block';
-                toggleWriteBtn.textContent = '글쓰기 닫기';
-                toggleWriteBtn.classList.remove('btn-primary');
-                toggleWriteBtn.classList.add('btn-secondary');
-            } else {
-                boardFormContainer.style.display = 'none';
-                toggleWriteBtn.textContent = '새 글 쓰기';
-                toggleWriteBtn.classList.remove('btn-secondary');
-                toggleWriteBtn.classList.add('btn-primary');
-            }
-        });
+        // Toggle logic removed: Form is always visible
     }
 
     function escapeHTML(str) {
@@ -168,13 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 postForm.reset();
-                if (boardFormContainer) boardFormContainer.style.display = 'none';
-                if (toggleWriteBtn) {
-                    toggleWriteBtn.textContent = '새 글 쓰기';
-                    toggleWriteBtn.classList.remove('btn-secondary');
-                    toggleWriteBtn.classList.add('btn-primary');
-                    toggleWriteBtn.style.display = 'inline-block';
-                }
                 loadPosts();
             } catch (error) {
                 console.error("저장 오류:", error);
@@ -198,14 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.textContent = '게시글 등록';
             submitBtn.style.backgroundColor = '';
             cancelBtn.style.display = 'none';
-
-            if (boardFormContainer) boardFormContainer.style.display = 'none';
-            if (toggleWriteBtn) {
-                toggleWriteBtn.textContent = '새 글 쓰기';
-                toggleWriteBtn.classList.remove('btn-secondary');
-                toggleWriteBtn.classList.add('btn-primary');
-                toggleWriteBtn.style.display = 'inline-block';
-            }
         };
         submitBtn.parentNode.insertBefore(cancelBtn, submitBtn.nextSibling);
     }
@@ -234,11 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.style.backgroundColor = '#10B981';
         document.getElementById('cancel-edit-btn').style.display = 'inline-block';
 
-        if (boardFormContainer) boardFormContainer.style.display = 'block';
-        if (toggleWriteBtn) {
-            toggleWriteBtn.style.display = 'none'; 
-        }
-        
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 

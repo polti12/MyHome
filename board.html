@@ -44,14 +44,12 @@
                         스토리지에 유지됩니다.</p>
                 </div>
                 <div style="display:flex; gap:10px;">
-                    <button id="toggle-write-btn" class="btn btn-primary"
-                        style="padding: 14px 28px; border:none; border-radius:4px; font-weight:700; font-size:0.9rem; cursor:pointer;">새
-                        글 쓰기</button>
+                    <!-- 버튼 비활성화 됨 (항상 보이기 기준 적용) -->
                 </div>
             </div>
 
-            <!-- 숨김 처리된 폼 -->
-            <div class="board-form-card" id="board-form-container" style="display: none; transition: all 0.3s ease;">
+            <!-- 기본 노출되는 폼 -->
+            <div class="board-form-card" id="board-form-container" style="display: block; transition: all 0.3s ease;">
                 <form id="post-form" class="board-form">
                     <div class="form-row">
                         <div class="input-group">

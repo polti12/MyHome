@@ -180,10 +180,10 @@
             <div class="project-hero-v2">
                 <div class="hero-main-media reveal">
                     <div class="final-video-placeholder" id="projectVideoContainer" style="padding: 0; background: #000; overflow: hidden; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
-                        <video id="mainProjectVideo" autoplay loop muted playsinline controls preload="auto" style="width:100%; height:100%; object-fit:contain; display:block;">
-                            <source src="images/6.MOV" type="video/mp4">
+                        <video id="mainProjectVideo" autoplay loop muted playsinline preload="auto" style="width:100%; height:100%; object-fit:contain; display:block;">
                             <source src="images/6.MOV" type="video/quicktime">
-                            브라우저가 동영상을 지원하지 않습니다.
+                            <source src="images/6.MOV" type="video/mp4">
+                            <p style="color:white; padding: 20px;">[비디오 로드 실패] 브라우저 환경에서 .MOV 재생을 지원하지 않습니다. Safari를 이용하시거나 다운로드하여 확인해주세요.</p>
                         </video>
                         <div class="scanlines-card"></div>
                     </div>
@@ -199,16 +199,16 @@
                             <div class="step-body">
                                 <span class="step-label">PHASE 01: PROBLEM ANALYSIS</span>
                                 <h5>기존 테오 얀센 구조의 한계 분석</h5>
-                                <p>다리 끝점 하중 집중으로 인한 링크 부하 및 에너지 손실 문제 진계</p>
+                                <p>다리 끝점에 발생하던 <span style="color:#FFB000; font-weight:700;">하중 집중</span>으로 인한 파손 및 <span style="color:#FFB000; font-weight:700;">비효율적 에너지 손실</span> 원인 파악</p>
                             </div>
                         </div>
 
                         <div class="log-step">
-                            <div class="step-icon"><i class="fas fa-drafting-polyhedron"></i></div>
+                            <div class="step-icon"><i class="fas fa-pen-ruler"></i></div>
                             <div class="step-body">
                                 <span class="step-label">PHASE 02: KINEMATIC SOLUTION</span>
                                 <h5>메커니즘 최적화 설계</h5>
-                                <p>삼각형 발 제거 및 직선형 링크 변형을 통한 기구학적 응력 분산 실현</p>
+                                <p>불필요한 발 구조 억제 및 선형적 링크 변경을 통해 <span style="color:#FFB000; font-weight:700;">응력 분산 실현</span></p>
                             </div>
                         </div>
 
@@ -217,7 +217,7 @@
                             <div class="step-body">
                                 <span class="step-label">PHASE 03: IMPLEMENTATION</span>
                                 <h5>3단계 순차 접지 방식 도입</h5>
-                                <p>점1 → 면 → 점2 순차 접지 시스템으로 타미야 기어박스 구동 효율 극대화</p>
+                                <p>점 → 면 → 점 <span style="color:#FFB000; font-weight:700;">순차 접지 메커니즘</span>으로 기어박스 구동 효율을 <span style="color:#FFB000; font-weight:700;">압전 수준으로 극대화</span></p>
                             </div>
                         </div>
 
@@ -226,7 +226,7 @@
                             <div class="step-body">
                                 <span class="step-label">FINAL RESULT</span>
                                 <h5>고속 보행 실증 및 기술력 입증</h5>
-                                <p>경진대회 우수상 수상 및 설계 데이터 대비 오차 0.1mm 미만 완결성 확보</p>
+                                <p>공학 경진대회 <span style="color:#FFB000; font-weight:700;">우수상 수상</span> 및 설계 대비 오차 <span style="color:#FFB000; font-weight:700;">0.1mm 미만</span>이라는 정밀함 달성</p>
                             </div>
                         </div>
                     </div>
@@ -365,7 +365,26 @@
         <!-- Bridge Removed -->
     </section>
 
-    <!-- SECTION 04: CONTACT (PROFESSIONAL HEADQUARTERS) -->
+    <!-- SECTION: COMMUNITY / FEEDBACK -->
+    <section id="community" class="section" style="background: rgba(10, 10, 12, 0.6); border-top: 1px solid rgba(255, 176, 0, 0.1);">
+        <div class="container text-center">
+            <div class="section-header" style="max-width: 600px; margin: 0 auto; margin-bottom: 40px;">
+                <h2 class="section-subtitle">TRACE 04. OPEN COMMUNICATION</h2>
+                <h3 class="section-title">Community & Feedback</h3>
+                <p style="color: var(--text-silver); margin-top: 15px; line-height: 1.6;">
+                    이곳은 평가자와 관람객이 직접 리뷰를 남기고 소통할 수 있는 오픈 게시판입니다. 
+                    프로젝트 피드백이나 질문, 또는 어떠한 의견이든 자유롭게 남겨주세요!
+                </p>
+            </div>
+            <div style="margin-top: 20px; text-align: center;">
+                <a href="board.html" class="btn btn-primary" style="padding: 16px 45px; font-size: 1.1rem; border-radius: 4px; box-shadow: 0 4px 15px rgba(255, 176, 0, 0.2);">
+                    자유 게시판 바로가기 <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 05: CONTACT (PROFESSIONAL HEADQUARTERS) -->
     <section id="contact" class="section">
         <div class="side-deco bracket-left"></div>
         <div class="side-deco bracket-right"></div>
@@ -379,18 +398,18 @@
                         기술의 가치를 실현하고 함께 성장할 <br>파트너를 찾고 계신다면, 언제든 연락 주시기 바랍니다.
                     </p>
                     <div class="identity-links-v3">
-                        <div class="id-link-v3">
-                            <span class="id-label">EMAIL</span>
-                            <a href="mailto:polti0000@dongyang.ac.kr">polti0000@dongyang.ac.kr</a>
-                        </div>
-                        <div class="id-link-v3">
-                            <span class="id-label">PHONE</span>
-                            <a href="tel:010-1234-1234">010-1234-1234</a>
-                        </div>
-                        <div class="id-link-v3">
-                            <span class="id-label">GITHUB</span>
-                            <a href="https://github.com/polti12" target="_blank">github.com/polti12</a>
-                        </div>
+                        <a href="mailto:polti0000@dongyang.ac.kr" class="id-link-v3" style="display:flex; text-decoration:none; padding:15px; border-radius:4px; transition: all 0.3s; align-items:center;">
+                            <span class="id-label" style="margin-right: 15px;">EMAIL</span>
+                            <span style="color:var(--text-white);">polti0000@dongyang.ac.kr</span>
+                        </a>
+                        <a href="tel:010-1234-1234" class="id-link-v3" style="display:flex; text-decoration:none; padding:15px; border-radius:4px; transition: all 0.3s; align-items:center;">
+                            <span class="id-label" style="margin-right: 15px;">PHONE</span>
+                            <span style="color:var(--text-white);">010-1234-1234</span>
+                        </a>
+                        <a href="https://github.com/polti12" target="_blank" class="id-link-v3" style="display:flex; text-decoration:none; padding:15px; border-radius:4px; transition: all 0.3s; align-items:center;">
+                            <span class="id-label" style="margin-right: 15px;">GITHUB</span>
+                            <span style="color:var(--text-white);">github.com/polti12</span>
+                        </a>
                     </div>
                 </div>
 
