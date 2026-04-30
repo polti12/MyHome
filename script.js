@@ -39,17 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Global Section Observer
+    // Global Section Observer & Reveal
     const initSectionObserver = () => {
         const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver((entries) => {
+        const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('section-active');
                 }
             });
         }, { threshold: 0.15 });
-        sections.forEach(s => observer.observe(s));
+        sections.forEach(s => sectionObserver.observe(s));
+
+        const reveals = document.querySelectorAll('.reveal, .mastery-card-v2');
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => revealObserver.observe(r));
     };
 
     // Uptime & Precision Tracker
@@ -202,8 +213,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         async startAll() {
+            this.isIdle = true;
+            this.render(); // Start rendering immediately for mouse tracking
             if (!this.targets.length) return;
-            this.render();
+            
+            this.isIdle = false;
             for (let i = 0; i < this.targets.length; i++) {
                 const el = this.targets[i];
                 const rect = el.getBoundingClientRect();
@@ -250,11 +264,9 @@ document.addEventListener('DOMContentLoaded', () => {
         setInteraction(false);
         setTimeout(() => {
             preloader.classList.add('granted');
-            const pc = new ProductionCoordinator();
-            pc.startAll().then(() => {
+            
+            const finalizeIntro = () => {
                 setInteraction(true);
-                document.querySelectorAll('.reveal, .mastery-card-v2').forEach(el => el.classList.add('active'));
-                
                 // Force play all videos after intro
                 const playVideos = () => {
                     document.querySelectorAll('video').forEach(v => {
@@ -266,7 +278,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Fallback for mobile: play on first touch/click
                 document.addEventListener('touchstart', playVideos, { once: true });
                 document.addEventListener('click', playVideos, { once: true });
-            });
-        }, 2000); // Smoother intro start
+            };
+
+            if (assemblyCanvas) {
+                const pc = new ProductionCoordinator();
+                pc.startAll().then(() => {
+                    // 1. Z-index를 떨어뜨려 배경으로 보냄
+                    // 2. 내부 로직(arm.opacity)에서 이미 투명하게 제어하므로, 캔버스 이중 투명도 적용 안함(투명해서 증발하는 버그 픽스)
+                    assemblyCanvas.style.zIndex = "0";
+                    assemblyCanvas.style.opacity = "1";
+                    finalizeIntro();
+                });
+            } else {
+                finalizeIntro();
+            }
+        }, 1200); // Intro start timing
+    } else {
+        // 프리로더가 없는 환경 (자유게시판 등)
+        if (assemblyCanvas) {
+            const pc = new ProductionCoordinator();
+            pc.startAll();
+            // 직빵으로 백그라운드로 밀어넣기
+            assemblyCanvas.style.zIndex = "0";
+            assemblyCanvas.style.opacity = "0.15";
+        }
+        document.querySelectorAll('.reveal, .mastery-card-v2').forEach(el => el.classList.add('active'));
+        setInteraction(true);
     }
 });

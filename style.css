@@ -1,4 +1,4 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+ï»¿@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 /* Design System - 'The Precision Lab' High-End Theme */
 :root {
@@ -3021,7 +3021,7 @@ body {
 }
 
 .gears-container::before, .gears-container::after {
-    content: '?™ï¸';
+    content: '?ï¿½ï¸';
     font-size: 80px;
     color: rgba(255, 176, 0, 0.1);
     animation: gear-rotate 12s linear infinite;
@@ -3513,7 +3513,7 @@ nav {
 /* =======================================
    OVERRIDE: REMOVE BLACK BARS & OPTIMIZE LAYOUT
    ======================================= */
-/* 1. ¸ğµç °­Á¦ °ËÀº»ö ¹è°æ Á¦°Å */
+/* 1. ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .final-video-placeholder, 
 .card-visual-box, 
 .card-visual-placeholder,
@@ -3522,9 +3522,9 @@ video {
     background: transparent !important;
 }
 
-/* 2. ÇÁ·ÎÁ§Æ® »ó´Ü: ¼¼·ÎÇü ¿µ»ó¿¡ ¸Â°Ô ±×¸®µå ºñÀ² Á¶Á¤ */
+/* 2. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Â°ï¿½ ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .project-hero-v2 {
-    /* ¿µ»ó Ä®·³À» Á¼°Ô(1), ±ÛÀ» ³Ğ°Ô(2) º¯°æÇÏ¿© ¿µ»ó ¿· °ËÀº ¿©¹é Áõ¹ß */
+    /* ï¿½ï¿½ï¿½ï¿½ Ä®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(1), ï¿½ï¿½ï¿½ï¿½ ï¿½Ğ°ï¿½(2) ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
     grid-template-columns: 1fr 2.5fr !important; 
     align-items: stretch !important;
     gap: 40px !important; 
@@ -3536,7 +3536,7 @@ video {
     margin: 0 auto !important;
 }
 
-/* 3. ÇÏ´Ü °øÁ¤ Ä«µå 3°³: ¾ïÁö °ËÀº¹Ú½º Áö¿ì°í ±ò²ûÇÏ°Ô */
+/* 3. ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½ 3ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ */
 .process-grid-v2 {
     gap: 30px !important;
 }
@@ -3557,7 +3557,7 @@ video {
 .process-card img {
     object-fit: contain !important;
     border-radius: 8px;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); /* µµ¸é¿¡ ¾à°£ÀÇ ÀÔÃ¼°¨ Ãß°¡ */
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); /* ï¿½ï¿½ï¿½é¿¡ ï¿½à°£ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ß°ï¿½ */
 }
 
 /* =======================================
@@ -3633,17 +3633,242 @@ body { font-family: 'Pretendard-Real', sans-serif !important; }
     word-break: keep-all !important;
 }
 
-/* FontAwesome ¾ÆÀÌÄÜ º¸È£ */
+/* FontAwesome ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ */
 .fas, .far, .fab, .fa, i[class*="fa-"] {
     font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
     font-weight: 900 !important;
 }
 
-/* ½ºÅ©·Ñ¹Ù Á¦°Å¸¦ À§ÇØ max-height Á¦ÇÑ ÇØÁ¦ */
+/* ï¿½ï¿½Å©ï¿½Ñ¹ï¿½ ï¿½ï¿½ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½ï¿½ max-height ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .project-hero-v2, .final-video-placeholder {
     max-height: none !important;
 }
 .hero-tech-log {
     overflow-y: visible !important;
     max-height: none !important;
+}
+
+/* =======================================
+   OVERRIDE: ROBOTIC CLAW BUTTON HOVER
+   ======================================= */
+.btn-primary, .btn-secondary, .btn-nav-premium, .btn {
+    position: relative !important;
+    overflow: visible !important; /* Å¬ï¿½Î°ï¿½ ï¿½Ù±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ */
+}
+
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½ ï¿½ï¿½ ï¿½âº» ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ù±ï¿½ï¿½Ê¿ï¿½ ï¿½ï¿½Ä¡) */
+.btn-primary::before, .btn-primary::after,
+.btn-secondary::before, .btn-secondary::after,
+.btn-nav-premium::before, .btn-nav-premium::after,
+.submit-btn-v3::before, .submit-btn-v3::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 60%;
+    opacity: 0;
+    transition: all 0.48s cubic-bezier(0.3, 2, 0.4, 0.8); /* Æ¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¶ï¿½ï¿½ È¿ï¿½ï¿½ */
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ï¿½ */
+.btn-primary::before, .btn-secondary::before, .btn-nav-premium::before, .submit-btn-v3::before {
+    left: -40px;
+    border-top: 3px solid #8f9ba8; /* ï¿½ï¿½Æ¿ ï¿½ï¿½Å» ï¿½ï¿½ï¿½ï¿½ */
+    border-bottom: 3px solid #8f9ba8;
+    border-left: 6px solid #FFB000; /* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Ã·ï¿½ */
+    border-radius: 4px 0 0 4px;
+}
+
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ï¿½ */
+.btn-primary::after, .btn-secondary::after, .btn-nav-premium::after, .submit-btn-v3::after {
+    right: -40px;
+    border-top: 3px solid #8f9ba8;
+    border-bottom: 3px solid #8f9ba8;
+    border-right: 6px solid #FFB000;
+    border-radius: 0 4px 4px 0;
+}
+
+/* È£ï¿½ï¿½ ï¿½ï¿½: Ã¶ï¿½ï¿½! ï¿½Ï°ï¿½ ï¿½ï¿½Æ° ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+.btn-primary:hover::before, .btn-secondary:hover::before, .btn-nav-premium:hover::before, .submit-btn-v3:hover::before {
+    left: -6px;
+    opacity: 1;
+}
+.btn-primary:hover::after, .btn-secondary:hover::after, .btn-nav-premium:hover::after, .submit-btn-v3:hover::after {
+    right: -6px;
+    opacity: 1;
+}
+
+/* =======================================
+   OVERRIDE: SCROLL REVEAL ANIMATIONS
+   ======================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.mastery-card-v2 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.mastery-card-v2.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Ensure hover transform runs separately afterwards using calc or overriding appropriately */
+.mastery-card-v2.active:hover, .process-card.active:hover {
+    transform: perspective(1200px) translateY(-15px) rotateX(6deg) rotateY(2deg);
+}
+
+/* Sections themselves fading in gently */
+.section {
+    opacity: 0.3;
+    transition: opacity 1.2s ease;
+}
+.section.section-active {
+    opacity: 1;
+}
+
+/* =======================================
+   OVERRIDE: COMMUNITY BOARD ANIMATION
+   ======================================= */
+.board-container {
+    animation: fadeUpBoard 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUpBoard {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ï¿½Ô½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½) */
+.post-item {
+    animation: popInPost 0.6s cubic-bezier(0.3, 1.5, 0.5, 1) forwards;
+    opacity: 0;
+    transform-origin: center top;
+}
+
+.post-item:nth-child(1) { animation-delay: 0.1s; }
+.post-item:nth-child(2) { animation-delay: 0.2s; }
+.post-item:nth-child(3) { animation-delay: 0.3s; }
+.post-item:nth-child(4) { animation-delay: 0.4s; }
+.post-item:nth-child(5) { animation-delay: 0.5s; }
+.post-item:nth-child(n+6) { animation-delay: 0.6s; }
+
+@keyframes popInPost {
+    0% {
+        opacity: 0;
+        transform: scale(0.96) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* =======================================
+   OVERRIDE: CONTACT SECTON READABILITY
+   ======================================= */
+.contact-info-grid {
+    gap: 40px !important;
+    padding: 20px 0 !important;
+}
+.c-label {
+    font-size: 1.25rem !important;
+    color: #FFB000 !important;
+    margin-bottom: 15px !important;
+    font-weight: 700 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 2px !important;
+}
+.c-label i {
+    font-size: 1.5rem !important;
+}
+.c-value {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #FFF !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    display: block;
+}
+.c-value:hover {
+    color: #FFB000 !important;
+    text-shadow: 0 0 15px rgba(255, 176, 0, 0.5);
+    transform: translateY(-2px);
+}
+.contact-main-grid p {
+    font-size: 1.4rem !important;
+    line-height: 1.7 !important;
+    font-weight: 500 !important;
+    color: #e2e8f0 !important;
+}
+
+
+
+/* =======================================
+   OVERRIDE: CONTACT V3 READABILITY
+   ======================================= */
+.identity-links-v3 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px !important;
+    margin-top: 30px !important;
+}
+.id-link-v3 {
+    padding: 25px 25px !important;
+    background: rgba(15, 25, 35, 0.6) !important;
+    border: 1px solid rgba(255, 176, 0, 0.2) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+.id-link-v3:hover {
+    background: rgba(255, 176, 0, 0.15) !important;
+    border-color: #FFB000 !important;
+    transform: translateY(-4px) !important;
+}
+.id-label {
+    font-size: 1.25rem !important;
+    color: #FFB000 !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.5px !important;
+    display: inline-block;
+    width: 140px; /* ê³ ì • ë„ˆë¹„ë¡œ ê¹”ë” ì •ë ¬ */
+}
+.id-label i {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+.id-link-v3 span:nth-child(2) {
+    font-size: 2.2rem !important; 
+    font-weight: 700 !important;
+    color: #FFF !important;
+}
+.contact-name-v3 {
+    font-size: 6rem !important;
+    font-weight: 900 !important;
+    letter-spacing: -2px !important;
+    margin-bottom: 25px !important;
+}
+.id-motto, .id-motto p {
+    font-size: 1.6rem !important;
+    line-height: 1.7 !important;
+    font-weight: 600 !important;
 }

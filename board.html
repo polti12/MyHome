@@ -14,6 +14,10 @@
 </head>
 
 <body style="background-color: var(--dark-bg); color: var(--text-white);">
+    <!-- Interactive Background System -->
+    <canvas id="assembly-canvas"></canvas>
+    <div class="background-grid"></div>
+    <div id="tracker" class="tracker"><span id="tracker-coords"></span></div>
 
     <nav id="navbar" class="scrolled">
         <div class="nav-container">
@@ -91,6 +95,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <!-- Firebase를 임포트하기 위해 type="module" 추가 -->
     <script type="module" src="board.js"></script>
 </body>
